@@ -1,12 +1,50 @@
+<%- contentFor('style') %>
+<style type="text/css">
+	*{margin: 0; padding: 0}
+	#pageHeader{
+		width: inherit;
+		height: 15%;
+		background-color: gray;
+	}
+	#pageBody{
+		width: inherit;
+		height: 75%;
+		background-color: white;
+	}
+	#pageFooter{
+		width: inherit;
+		height: 10%;
+		background-color: gray;
+	}
+</style>
+
 <%- contentFor('pageSection') %>
 <!-- 页首部分 -->
-<div>
+<div id="pageHeader">
 	<!-- logo -->
 	<div></div>
 	<!-- navigation -->
+	<div>
+		<div></div>
+		<div></div>
+	</div>
+</div>
+
+<!-- 主体部分 -->
+<div id="pageBody">
+	<!-- 菜单栏 -->
+	<div></div>
+	<!-- 播放栏 -->
+	<div></div>
+	<!-- 信息栏 -->
 	<div></div>
 </div>
-<!-- 主体部分 -->
-<div></div>
+
 <!-- 页尾部分 -->
-<div></div>
+<div id="pageFooter"></div>
+
+<script type="text/javascript">
+	var devObj = document.getElementsByTagName("body")[0];
+		devObj.style.height = window.innerHeight+"px";
+		devObj.style.width = window.innerWidth+"px";
+</script>
